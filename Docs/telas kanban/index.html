@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Cabeçalho -->
+    <header>
+      <div class="logo-box"><img src="./img/Geminix.png" alt="Logo Squad Geminix"></div>
+      <div class="menu-dropdown">
+        <button onclick="toggleMenu()" class="menu-btn">
+          Menu <span style="float:right">▼</span>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="./index.html">Kanban Board</a>
+          <a href="./html/usuario.html">Novo Usuário</a>
+          <a href="./html/tarefa.html">Nova Tarefa</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quadro Kanban -->
+    <main class="kanban-board">
+      <section class="column" id="col-todo">
+        <h3>A Fazer</h3>
+      </section>
+      <section class="column" id="col-doing">
+        <h3>Em andamento</h3>
+      </section>
+      <section class="column" id="col-done">
+        <h3>Executado</h3>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal de Edição -->
+<div id="editModal" class="modal-overlay">
+  <div class="modal-content">
+    <h3>Editar Tarefa</h3>
+    <p><strong>ID:</strong> <span id="modal-id"></span></p>
+
+    <div class="form-group">
+      <label>Status</label>
+      <select id="modal-status">
+        <option value="todo">A Fazer</option>
+        <option value="doing">Em andamento</option>
+        <option value="done">Executado</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Executante</label>
+      <select id="modal-executante"></select>
+    </div>
+
+    <div class="form-group">
+      <label>Título</label>
+      <input type="text" id="modal-titulo">
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-primary" onclick="saveEdit()">Salvar</button>
+      <button class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
