@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('./partials/head') %>
+
+    <body>
+        <header>
+            <div class="logo-box"><img src="./img/Geminix.png" alt="Logo Squad Geminix"></div>
+            <div class="menu-dropdown">
+                <button onclick="toggleMenu()" class="menu-btn">
+                    Menu <span style="float:right">▼</span>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="./index.html">Kanban Board</a>
+                    <a href="./html/usuario.html">Novo Usuário</a>
+                    <a href="./html/tarefa.html">Nova Tarefa</a>
+                </div>
+            </div>
+        </header>
+
+
+        <main>
+            <section class="column" id="col-todo">
+                <h3>A Fazer</h3>
+            </section>
+            <section class="column" id="col-doing">
+                <h3>Em andamento</h3>
+            </section>
+            <section class="column" id="col-done">
+                <h3>Executado</h3>
+            </section>
+        </main>
+
+        <%- include('./partials/footer') %>
+
+            <!-- javascript que roda no front-end da aplicação(pasta public) -->
+            <script src="../public/js/main.js"></script>
+
+    </body>
+
+</html>
