@@ -7,6 +7,7 @@
 
     CREATE DATABASE meubanco
     CHARACTER SET utf8mb4;
+
  
  */ 
 

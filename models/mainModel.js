@@ -1,7 +1,7 @@
 const dbExemplo = require('../db/dbConnect.js')
 
 // CRUD PARA CADA CLASSE DA TABELA
-class Exemplo {
+class Tarefa {
 
 
     //CREATE
@@ -10,12 +10,12 @@ class Exemplo {
 
         const { campo1, campo2, campo3 } = dados
         // debug da função
-        console.log('mainModel.js','Exemplo.createExemplo()')
+        console.log('mainTarefa.js','Exemplo.createExemplo()')
         console.log(arguments);
 
 
         return await dbExemplo.executarQuery(
-            'INSERT INTO tabelaExemplo(campo1, campo2, campo3) VALUES (?, ?, ?)',
+            'INSERT INTO tabelaTarefa(campo1, campo2, campo3) VALUES (?, ?, ?)',
             [campo1, campo2, campo3]
         )
 
